@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -15,9 +16,12 @@
         <AutoCompleteTextView
             android:id="@+id/atLessonName"
             android:layout_width="0dp"
-            android:hint="add a lesson name"
-
             android:layout_height="wrap_content"
+            android:hint="Add a lesson name"
+            android:backgroundTint="@color/purple_200"
+            android:popupBackground="@color/purple"
+            android:textColor="@color/white"
+            android:textColorHint="@color/softWhite"
             app:layout_constraintEnd_toStartOf="@id/btnSave"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -27,6 +31,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:entries="@array/credits"
+            android:popupBackground="@color/purple"
+            android:backgroundTint="@color/softWhite"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="@id/spnNote"
             app:layout_constraintEnd_toStartOf="@id/spnNote"
             app:layout_constraintHorizontal_bias="0.5"
@@ -38,6 +45,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:entries="@array/allNotes"
+            android:popupBackground="@color/purple"
+            android:backgroundTint="@color/softWhite"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="@id/spnCredit"
             app:layout_constraintEnd_toStartOf="@id/btnSave"
             app:layout_constraintHorizontal_bias="0.5"
@@ -46,9 +56,10 @@
 
         <Button
             android:id="@+id/btnSave"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+
+            android:background="@drawable/btnadd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -57,21 +68,23 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/teal_700" />
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        >
+        android:layout_height="400dp">
+
         <LinearLayout
+            android:id="@+id/srclLessonView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/srclLessonView"/>
+            android:orientation="vertical" />
     </ScrollView>
+
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculate"
         android:id="@+id/btnCalcul"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:layout_gravity="center"
+        android:background="@drawable/calculator"
         />
 </LinearLayout>
